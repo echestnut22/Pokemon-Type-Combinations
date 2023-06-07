@@ -6,8 +6,9 @@ This repository provides a visualization of different Pokemon types with a chord
 
 ## Prerequisites
 Ensure you have the following installed on your machine:
-- Python 3.6 or above
-- pip (Python package installer)
+- [Python 3.6 or above](https://www.python.org/downloads/)
+- [pip (Python package installer)](https://pip.pypa.io/en/stable/installation/)
+
 
 
 ## Installation
