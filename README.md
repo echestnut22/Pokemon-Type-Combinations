@@ -27,7 +27,7 @@ git clone https://github.com/echestnut22/Pokemon-Type-Combinations
 
 
 In command prompt or terminal, navigate to the directory where you cloned or extracted the repository using the cd (change directory) command. 
-If you placed it in your Desktop,you can get there by typing:
+If you placed it in your Desktop, you can get there by typing:
 ```
 cd /Users/your_user_name/Desktop/Pokemon-Type-Combinations
 ```
