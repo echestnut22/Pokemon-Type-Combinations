@@ -3,8 +3,8 @@ import holoviews as hv
 import panel as pn
 from holoviews import opts, dim
 hv.extension('bokeh')
-from constants import TYPE_COLORS
-from hyperlink import assign_hyperlink
+from .constants import TYPE_COLORS
+from .hyperlink import assign_hyperlink
 import os
 
 def create_chord_plot(df):

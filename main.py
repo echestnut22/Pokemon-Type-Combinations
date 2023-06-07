@@ -136,8 +136,8 @@ reset_button.param.watch(on_select_type, 'value')
 
 # Create the header row with the drop-down tabs and the title
 header_title = "Pokemon Type Combinations"
-left_image_url = f'<img src="https://raw.githubusercontent.com/echestnut22/Pokemon-Type-Combinations/main/Data/Pokemon%20PNGs/Pokeball.png" width="50" height>'
-right_image_url = f'<img src="https://raw.githubusercontent.com/echestnut22/Pokemon-Type-Combinations/main/Data/Pokemon%20PNGs/Pokeball.png" width="50" height>'
+left_image_url = f'<img src="https://raw.githubusercontent.com/echestnut22/Pokemon-Type-Combinations/main/data/Pokemon%20PNGs/Pokeball.png" width="50" height>'
+right_image_url = f'<img src="https://raw.githubusercontent.com/echestnut22/Pokemon-Type-Combinations/main/data/Pokemon%20PNGs/Pokeball.png" width="50" height>'
 
 
 header = pn.Row(
