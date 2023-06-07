@@ -1,5 +1,3 @@
-(In Progress)
-
 # Pokemon-Type-Combinations
 
 This repository provides a visualization of different Pokemon types with a chord diagram. A table is also featured that is able to be filtered by pokemon types. The table can also be filtered by stats and is accompanied by a type effectiveness calculator, providing a useful team composition tool for players.
