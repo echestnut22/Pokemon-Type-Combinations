@@ -40,7 +40,7 @@ def create_chord_plot(df):
             'source_color': source_color,
             'target_color': target_color})
 
-    #Chord diagram creation and customization 
+   #Chord diagram creation and customization 
     links_ds = hv.Dataset(pd.DataFrame(links), ['source', 'target'])
 
     nodes = hv.Dataset(nodes_df_with_color, 'Type 1', 'color')
