@@ -21,10 +21,13 @@ def assign_hyperlink (df):
         pokemon_link = f"https://bulbapedia.bulbagarden.net/wiki/{shortest_name_links[row['NDex']]}_(Pok%C3%A9mon)"
 
         type_1 = f"<a href='https://github.com/echestnut22/Pokemon-Type-Combinations/raw/main/data/Pokemon%20PNGs/{row['Type 1']}.png' target='_blank'><img src='https://github.com/echestnut22/Pokemon-Type-Combinations/raw/main/data/Pokemon%20PNGs/{row['Type 1']}.png' width='70'></a>"
+        type_1 = f"<a href='https://storage.googleapis.com/pokemon_pngs/Pokemon%20PNG%202/{row['Type 1']}.png' target='_blank'><img src='https://storage.googleapis.com/pokemon_pngs/Pokemon%20PNG%202/{row['Type 1']}.png' width='70'></a>"
         type_2 = ""
         if pd.notnull(row['Type 2']):
             type_2_url = f"https://github.com/echestnut22/Pokemon-Type-Combinations/raw/main/data/Pokemon%20PNGs/{row['Type 2']}.png"
             type_2 = f"<a href='{type_2_url}' target='_blank'><img src='{type_2_url}' width='70'></a>" if type_2_url != 'https://github.com/echestnut22/Pokemon-Type-Combinations/raw/main/data/Pokemon%20PNGs/None.png' else ""
+            type_2_url = f"https://storage.googleapis.com/pokemon_pngs/Pokemon%20PNG%202/{row['Type 2']}.png"
+            type_2 = f"<a href='{type_2_url}' target='_blank'><img src='{type_2_url}' width='70'></a>" if type_2_url != 'https://storage.googleapis.com/pokemon_pngs/Pokemon%20PNG%202/' else ""
 
         pokemon_data.append({
             '': f"<a href='{pokemon_link}' target='_blank'><img src='{row['Image']}' width='100'></a>",
