@@ -186,7 +186,6 @@ def create_dataframe():
     # Replace ' with _ for Farfetch'd and other pokemon with apostrophe in name.
     df['Image'] = df['Name'].str.replace("'", "_").apply(lambda x: f"https://storage.googleapis.com/pokemon_pngs/Pokemon%20PNG%202/{x}.png")
 
-
     return df
 
 def sort_dataframe(df_filtered, sort_by):
