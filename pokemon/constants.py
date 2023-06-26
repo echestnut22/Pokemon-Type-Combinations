@@ -1,6 +1,5 @@
 import pandas as pd
 import re
-import os
 
 #Forms to be removed in Regex below for hyperlinks
 ALTERNATE_FORMS = ["Mega", "Alolan", "Partner", "Galarian", "Hisuian"]
