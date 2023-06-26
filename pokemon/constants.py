@@ -1,6 +1,5 @@
 import pandas as pd
 import re
-import os
 
 ALTERNATE_FORMS = ["Mega", "Alolan", "Partner", "Galarian", "Hisuian"]
 
