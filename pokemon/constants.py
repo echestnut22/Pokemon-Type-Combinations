@@ -1,10 +1,8 @@
 import pandas as pd
 import re
 
-#Forms to be removed in Regex below for hyperlinks
 ALTERNATE_FORMS = ["Mega", "Alolan", "Partner", "Galarian", "Hisuian"]
 
-#Replacing names in dataframe for better legibility and image assignment 
 REPLACEMENT_RULES = {
     "Farfetch' Galarian Farfetch'd": "Galarian Farfetch'd",
     "Mr.  Galarian Mr. Mime": "Galarian Mr. Mime",
@@ -48,7 +46,7 @@ REPLACEMENT_RULES = {
     "Galarian Zen Mode": "Galarian Darmanitan Zen Mode",
     
 } 
-#Color mapping for Pokemon types in Chord Diagram
+
 TYPE_COLORS = {
     'Fairy': '#EE99AC',
     'Bug': '#A8B820',
@@ -70,9 +68,7 @@ TYPE_COLORS = {
     'Water': '#6890F0'
 }
 
-"""
-Dictionary for type effectiveness calculator as well as image assignement for types in table 
-"""
+#Type effectiveness dicitonary for type calculator and image assignment 
 TYPE_EFFECTIVENESS = {
     'Normal': {
         'image_url': 'https://storage.googleapis.com/pokemon_pngs/Pokemon%20PNG%202/Normal.png',
@@ -166,7 +162,7 @@ def create_dataframe():
 
     df['NDex'] = df['NDex'].astype(str).str.zfill(4)
 
-    # Regular expression to filter out forms for hyperlinks 
+    # Create a regular expression pattern to match the preceding words
     pattern = r"\b\w+\b(?=\s+(?:" + "|".join(ALTERNATE_FORMS) + r"))"
 
     # Apply the lambda function to the "Name" column to remove preceding words
@@ -177,20 +173,19 @@ def create_dataframe():
     #Remove Irrelevant pokemon from df 
     df = df[~df['Name'].isin(['Pumpkaboo Small Size', 'Pumpkaboo Large Size', 'Pumpkaboo Super Size', 'Gourgeist Small Size', 'Gourgeist Large Size', 'Gourgeist Super Size', 'Rockruff Own Tempo Rockruff', 'Eternatus Eternamax','Partner Eevee','Giratina Altered Forme'])]
 
-    #Ensure pokemon of first form comes first in DataFrame. Important for correct hyperlink assignment 
+    #Ensure pokemon of first form comes first in DataFrame. Important for hyperlinks
     def sort_group(group):
         return group.sort_values(by='Name', key=lambda x: x.str.len())
     df = df.groupby('NDex', group_keys=False).apply(sort_group)
 
     # Add a new column with image paths for every Pokemon using Google API(image rendering too slow with GitHub)
-    # Replace ' with _ for Farfetch'd and other pokemon with apostrophe in name.
+    #Replace ' with _ for Farfetch'd and other pokemon with apostrophe in name.
     df['Image'] = df['Name'].str.replace("'", "_").apply(lambda x: f"https://storage.googleapis.com/pokemon_pngs/Pokemon%20PNG%202/{x}.png")
 
 
     return df
 
 def sort_dataframe(df_filtered, sort_by):
-
     if sort_by == 'NDex':
         df_filtered = df_filtered.sort_values(by='NDex')
     elif sort_by == 'Name':
