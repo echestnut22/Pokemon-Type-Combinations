@@ -40,16 +40,13 @@ def create_chord_plot(df):
             'source_color': source_color,
             'target_color': target_color})
 
-    # Create a HoloViews Dataset from the links
+   #Chord diagram creation and customization 
     links_ds = hv.Dataset(pd.DataFrame(links), ['source', 'target'])
 
-    # Create a HoloViews Dataset from the nodes DataFrame
     nodes = hv.Dataset(nodes_df_with_color, 'Type 1', 'color')
 
-    # Create a chord diagram
     chord = hv.Chord((links_ds, nodes))
 
-    # Customize the appearance of the chord diagram
     chord.opts(
         opts.Chord(cmap=type_cmap, edge_cmap=type_cmap, edge_color=dim('source_color').str(),
                    labels='Type 1', node_color='color', height=750, width=750)
@@ -60,6 +57,7 @@ def create_chord_plot(df):
     return plot
 
 def generate_html_table(df_filtered):
+
     pokemon_data = assign_hyperlink(df_filtered)
 
     pokemon_df = pd.DataFrame(pokemon_data, columns=['', 'Dex #', 'Name', 'Type(s)','Total', 'HP', 'Atk', 'Def', 'Sp. Atk', 'Sp. Def', 'Spd'])
@@ -70,6 +68,8 @@ def generate_html_table(df_filtered):
     html_table = html_table.replace('<td', "<td style='padding: 5px; border: 2px solid black; font-family: Arial, sans-serif; font-size: 14px; color: #333; text-align: center;'")
     html_table = html_table.replace('<th>', "<th style='text-align: center; border-top: 2px solid black; border-right: 2px solid black; border-left: 2px solid black;'>")
 
+
+    #Table customization
     css_style = """
     <style>
         .fixed-width {
@@ -78,20 +78,17 @@ def generate_html_table(df_filtered):
     </style>
     """
 
-    # Add the CSS style to the beginning of the HTML table
     html_table = css_style + html_table
 
-    # Add the class 'fixed-width' to the desired columns
     html_table = html_table.replace('<td style=', "<td class='fixed-width' style=")
 
-    # Set the maximum height of the table and add a scrollbar
     html_table = f"<div style='max-height: 500px; overflow-y: scroll;'><table style='max-width:100%;'>{html_table}</table></div>"
 
     return html_table
 
 
 def generate_effectiveness_table(effectiveness_dict, attacked_type1, attacked_type2, TYPE_EFFECTIVENESS):
-    # Group the effectiveness values into categories
+    # Group the effectiveness values into categories for calculation
     categories = {
         0: [],
         0.25: [],
@@ -115,7 +112,7 @@ def generate_effectiveness_table(effectiveness_dict, attacked_type1, attacked_ty
             categories[4].append(key)
   
     
-    # Generate an HTML table
+    # Generate table for type effectiveness values calculator
     table_html = '<table style="border-collapse: collapse; width: 100%; background-color: #f1f1f1; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);">'
     if attacked_type1 == 'All' and attacked_type2 == 'All':
         table_html += '<tr><td colspan="0" style="padding: 0px; border: 0px solid black; font-family: Arial, sans-serif; font-size: 20px;">Select Pokemon Types to see Type Advantages</td></tr>'
