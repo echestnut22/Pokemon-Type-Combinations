@@ -1,7 +1,7 @@
 import panel as pn
 from pokemon.visuals import create_chord_plot, generate_html_table, generate_effectiveness_table
 from pokemon.constants import create_dataframe, sort_dataframe, TYPE_EFFECTIVENESS
-
+#
 
 df = create_dataframe()
 
