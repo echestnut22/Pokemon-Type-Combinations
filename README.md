@@ -1,6 +1,6 @@
 # Pokemon-Type-Combinations
 
-This repository provides a visualization of different Pokemon types with a chord diagram using a locally hosted HTML page. A table is also featured that is able to be filtered by pokemon types. The table can also be filtered by stats and is accompanied by a type effectiveness calculator, providing a useful team composition tool for players.
+This repository provides a visualization of different Pokemon types with a chord diagram using a locally hosted HTML page. A table is also featured that can be filtered by pokemon types and stats. The table is accompanied by a type effectiveness calculator, providing a useful team composition tool for players.
 
 ## Prerequisites
 Ensure you have the following installed on your machine:
@@ -52,7 +52,7 @@ python main.py
 ```
 
 
-## Image Downloads
+## Downloading Pokemon Images
 Images used for this project are the work of artist Ken Sugimori found here https://archives.bulbagarden.net/wiki/Category:Ken_Sugimori_Pok%C3%A9mon_artwork
 
 This repository assigns images to Pokemon via a public google bucket. If one wishes to download the images used in this project, you can run the image_scraper.py file in the data folder. NOTE: This script will require the user to manually enter the directory they would like to download these images found at the top of the script. 
