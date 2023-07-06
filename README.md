@@ -52,3 +52,9 @@ python main.py
 ```
 
 
+## Image Downloads
+Images used for this project are the work of artist Ken Sugimori found here https://archives.bulbagarden.net/wiki/Category:Ken_Sugimori_Pok%C3%A9mon_artwork
+
+This repository assigns images to Pokemon via a public google bucket. If one wishes to download the images used in this project, you can run the image_scraper.py file in the data folder. NOTE: This script will require the user to manually enter the directory they would like to download these images found at the top of the script. 
+
+Python scripts have also been included for renaming images for better readability as well as scraping and organizing dataframe (although clean dataframe is included in repository as pokedex.csv)
