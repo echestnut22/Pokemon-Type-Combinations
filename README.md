@@ -20,19 +20,7 @@ git clone https://github.com/echestnut22/Pokemon-Type-Combinations
 ```
 
 
-
-### 2. Navigate to the Repository Folder
-
-
-In command prompt or terminal, navigate to the directory where you cloned or extracted the repository using the cd (change directory) command. 
-If you placed it in your Desktop, you can get there by typing:
-```
-cd /Users/your_user_name/Desktop/Pokemon-Type-Combinations
-```
-Replace your_user_name with user info
-
-
-### 3. Setting Up a Virtual Environment (optional)
+### 2. Setting Up a Virtual Environment (optional)
 
 Before installing the project's dependencies, it's recommended to set up a Python virtual environment. This helps to avoid conflicts with other       installed Python packages that may exist on your system.
 
@@ -51,13 +39,13 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-### 4. Install Required Python Packages
+### 3. Install Required Python Packages
 Install requirements and packages by running:
 ```
 pip install .
 ```
 
-### 5. Running the application 
+### 4. Running the application 
 To run application as localhost:
 ```
 python main.py
