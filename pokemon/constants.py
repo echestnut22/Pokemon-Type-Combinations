@@ -162,7 +162,7 @@ TYPE_EFFECTIVENESS = {
 
 def create_dataframe():
 
-    df = pd.read_csv('https://raw.githubusercontent.com/echestnut22/Pokemon-Type-Combinations/main/data/pokedex.csv')
+    df = pd.read_csv('data/pokedex.csv')
 
     df = df.rename(columns={"Pokedex Number": "NDex"})
 
