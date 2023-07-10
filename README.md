@@ -7,8 +7,9 @@ Ensure you have the following installed on your machine:
 - [Python 3.6 or above](https://www.python.org/downloads/)
 - [pip (Python package installer)](https://pip.pypa.io/en/stable/installation/)
 
-##Example Video 
-Click the video below to see application in use
+## Example Video
+
+Click the video below to see application in use.
 
 [![Pokemon](http://img.youtube.com/vi/FIli4OFn-OM/0.jpg)](http://www.youtube.com/watch?v=FIli4OFn-OM "Pokemon Type Combinations")
 
