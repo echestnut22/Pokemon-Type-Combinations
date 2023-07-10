@@ -8,7 +8,7 @@ Ensure you have the following installed on your machine:
 - [pip (Python package installer)](https://pip.pypa.io/en/stable/installation/)
 
 
-[![Pokemon Type Combinations(http://img.youtube.com/vi/FIli4OFn-OM/0.jpg)](http://www.youtube.com/watch?v=FIli4OFn-OM "Pokemon Type Combinations")
+[![Video Name](http://img.youtube.com/vi/FIli4OFn-OM/0.jpg)](http://www.youtube.com/watch?v=FIli4OFn-OM "Video Name")
 
 
 
